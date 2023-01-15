@@ -13,7 +13,7 @@ class FrontController extends Controller
 {
     //
     public function index(){
-        return view('welcome');
+        return "Checking...";
         SEOTools::setTitle(setting('site.title')." - ".setting('site.tagline'));
         SEOTools::setDescription(setting('site.description'));
        // notify()->success('Welcome to '.setting('site.title').'⚡️');
