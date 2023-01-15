@@ -93,7 +93,7 @@
                     @if(setting('site.home.3.image'))
                         <div class="col-lg-6 v-center">
                             <div class="single-image wow fadeIn" data-wow-delay=".5s">
-                                <img src="{{asset('storage/')."/".setting('site.home.2.image')}}" alt="{{setting('site.home.3.title')}}" class="img-fluid"/>
+                                <img src="{{asset('storage/')."/".setting('site.home.3.image')}}" alt="{{setting('site.home.3.title')}}" class="img-fluid"/>
                             </div>
                         </div>
                     @endif

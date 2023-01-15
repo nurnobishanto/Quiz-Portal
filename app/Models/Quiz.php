@@ -49,6 +49,10 @@ class Quiz extends Model
     {
         return $this->belongsToMany(Mcq::class);
     }
+    public function randommcqs():BelongsToMany
+    {
+        return $this->belongsToMany(Mcq::class)->inRandomOrder();
+    }
 //    public function results():BelongsToMany
 //    {
 //        return $this->belongsToMany(Result::class);

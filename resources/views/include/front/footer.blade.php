@@ -84,7 +84,7 @@
 
                         @if(setting('site.copyright'))
                         <div class="footer-">
-                            <p>{{setting('site.copyright') }}</p>
+                            <p>{!! setting('site.copyright') !!}</p>
                         </div>
                         @endif
                     </div>

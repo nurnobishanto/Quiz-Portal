@@ -14,7 +14,7 @@ class FrontController extends Controller
     //
     public function index(){
         //return view('welcome');
-        SEOTools::setTitle('Home');
+        SEOTools::setTitle(setting('site.title')." - ".setting('site.tagline'));
         SEOTools::setDescription(setting('site.description'));
        // notify()->success('Welcome to '.setting('site.title').'⚡️');
         //emotify('success', 'You are awesome, your data was successfully created');

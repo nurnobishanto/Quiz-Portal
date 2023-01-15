@@ -30,6 +30,7 @@
                         <div style="font-size: 14px;">Submitted : {{ date('h:i A d M Y', strtotime($result->created_at)) }}</div>
                         <div style="font-size: 14px;">Duration : {{ floor($result->time / 60) }} Minutes
                                     {{ $result->time % 60 }} Seconds</div>
+					
                         <p>
                             <a class="btn btn-primary mt-1" href="{{route('download.card',['id'=>$result->id])}}" target="_blank" rel="noopener noreferrer">Download Result Card</a>
                         </p>
@@ -39,16 +40,21 @@
                         <p>
                             <a class="btn btn-primary mt-1" href="{{route('download.quiz',['id'=>$result->quiz->id])}}" target="_blank" rel="noopener noreferrer">Download Quiz Paper</a>
                         </p>
+						<?php if($result->quiz->end < date("Y-m-d h:i:s")) { ?>
+						
+						
+						
                         <p>
                             <a class="btn btn-warning mt-1" href="{{route('download.answer',['id'=>$result->quiz->id])}}" target="_blank" rel="noopener noreferrer">Download Quiz Answer</a>
                         </p>
                         <p>
                             <a class="btn btn-primary mt-1" href="{{route('download.attempt',['id'=>$result->id])}}" target="_blank" rel="noopener noreferrer">Download Your Answer sheet</a>
                         </p>
+						<?php } ?>
                     </div>
 
             </div>
-            <div class="col-span-12 sm:col-span-6 xl:col-span-8">
+            <div @if($result->quiz->end > date("Y-m-d h:i:s")) style="display:none;" @endif class="col-span-12 sm:col-span-6 xl:col-span-8">
 
                 <?php
                 $count = 1;

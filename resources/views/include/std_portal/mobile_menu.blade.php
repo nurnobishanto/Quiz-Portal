@@ -1,8 +1,7 @@
-
 <div class="mobile-menu md:hidden">
     <div class="mobile-menu-bar">
         <a href="{{route('portal')}}" class="flex mr-auto">
-            <img alt="{{setting('site.title')}}" class="w-24" src="{{ asset('storage')."/".setting('site.logodark') }}">
+            <img alt="{{setting('site.title')}}" class="w-48" src="{{ asset('storage')."/".setting('site.logodark') }}">
         </a>
         <a href="javascript:;" class="mobile-menu-toggler"> <i data-lucide="bar-chart-2" class="w-8 h-8 text-white transform -rotate-90"></i> </a>
     </div>
@@ -73,4 +72,3 @@
         </ul>
     </div>
 </div>
-
