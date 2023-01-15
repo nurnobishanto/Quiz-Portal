@@ -1,0 +1,3 @@
+<svg wire:loading.remove.delay="1" wire:target="mountAction('createemail')" class="filament-dropdown-list-item-icon mr-2 h-5 w-5 rtl:ml-2 rtl:mr-0 group-hover:text-white group-focus:text-white text-gray-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+</svg><?php /**PATH /home/nurnobis/quizportal.online/storage/framework/views/134ee3fdc8e519efcfc0a2cd356a6e414fb0043d.blade.php ENDPATH**/ ?>
