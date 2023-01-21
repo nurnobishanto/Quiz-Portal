@@ -91,7 +91,7 @@ class QuizController extends Controller
         if ($quiz){
             SEOTools::setTitle($quiz->name.' - '.setting('site.title'));
             SEOTools::setDescription(setting('site.description'));
-            return view('std_portal.start',compact('quiz',));
+            return view('std_portal.start',compact('quiz'));
         }else{
             abort(404);
         }
@@ -149,7 +149,7 @@ class QuizController extends Controller
                 }
 
             } else {
-                return view('error.nolimit');
+                return view('errors.nolimit');
             }
 
         }else{
@@ -204,7 +204,7 @@ class QuizController extends Controller
                 }
 
             } else {
-                return view('error.nolimit');
+                return view('errors.nolimit');
             }
 
         }
@@ -225,8 +225,10 @@ class QuizController extends Controller
                 $attempt = Session::get($paperid);
                 Session::forget($paperid);
             } else {
-                $result = Result::where('user_id', Auth::user()->id)->where('quiz_id', $request->paperid)->orderBy('mark', 'DESC')->orderBy('time', 'ASC')->orderBy('created_at', 'ASC')->first();
-                return view('std_portal.result', compact('result'));
+                
+                  return redirect()->route('portal.result');
+                // $result = Result::where('user_id', Auth::user()->id)->where('quiz_id', $request->paperid)->orderBy('mark', 'DESC')->orderBy('time', 'ASC')->orderBy('created_at', 'ASC')->first();
+                // return view('std_portal.result', compact('result'));
             }
 
             $date = Carbon::now();

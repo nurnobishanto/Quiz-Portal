@@ -77,7 +77,7 @@
             <span class="text-success "><strong> Total Mark : {{ $total }} X {{ $paper->positive_mark }} =
                                 {{ $total * $paper->positive_mark }} </strong></span><br>
             <?php $i = 1 ?>
-            @foreach ($paper->mcqs as $question)
+            @foreach ($paper->randommcqs as $question)
                 <div class="row  border mt-2 p-2">
                     <input type="text" name="q{{ $count }}" value="{{ $question->id }}" hidden>
                     <input type="text" name="ca{{ $count }}" value="{{ $question->ca }}" hidden>

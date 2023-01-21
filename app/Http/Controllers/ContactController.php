@@ -36,7 +36,7 @@ class ContactController extends Controller
             'message' => $input['message'],
         ), function($message) use ($request){
             $message->from($request->email);
-            $message->to('nurnobishanto1@gmail.com', 'EduHub')->subject($request->get('subject'));
+            $message->to('support@quizportal.online', 'Quiz Portal Online')->subject($request->get('subject'));
         });
 
         return redirect()->back()->with([

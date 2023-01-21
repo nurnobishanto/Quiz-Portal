@@ -33,7 +33,7 @@
                         <div class="images mt20">
                             <img src="{{asset('frontsite')}}/images/shape/error-page.png" alt="error page" class="img-fluid"/>
                         </div>
-                        <a href="{{route('front')}}" class="btn-outline">Back to Home</a>
+                        <a href="{{route('front')}}" class="btn-outline">Go Home</a>
                     </div>
                 </div>
             </div>

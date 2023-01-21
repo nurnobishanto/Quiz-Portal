@@ -37,7 +37,7 @@
                                     <td>{{$r->mark}}</td>
                                     <td>{{$r->ca}}</td>
                                     <td>{{$r->wa}}</td>
-                                    <td>{{$r->created_at}}</td>
+                                    <td>{{  date('h:i A d M Y', strtotime($r->created_at))}}</td>
                                     <td><a class="btn btn-primary" href="{{route('portal.single_result',['id'=>$r->id])}}">Details</a></td>
                                 </tr>
                                     <?php $rank ++;?>
