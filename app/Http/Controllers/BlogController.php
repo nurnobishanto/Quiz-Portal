@@ -13,7 +13,7 @@ class BlogController extends Controller
 {
 
     public function index(){
-        $posts = Post::all();
+        $posts = Post::orderBy('id','DESC')->get();
         $title = "Blog";
         if ($posts){
             SEOTools::setTitle($title." - ".setting('site.title'));
