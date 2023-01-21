@@ -60,6 +60,7 @@
                     @endif
                 </li>
                 @endforeach
+                <li><a class="btn btn-warning text-dark" href="{{route('portal')}}">Portal</a></li>
             </ul>
 
             <ul class="bottom-nav">
