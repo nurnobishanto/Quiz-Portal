@@ -33,7 +33,7 @@
                             @foreach($result as $r)
                                 <tr>
                                     <th scope="row">{{$rank}}</th>
-                                    <td>{{$r->user->name}}</td>
+                                    <td>{{$r->quiz->name}}</td>
                                     <td>{{$r->mark}}</td>
                                     <td>{{$r->ca}}</td>
                                     <td>{{$r->wa}}</td>
