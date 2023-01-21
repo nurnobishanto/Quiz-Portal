@@ -49,9 +49,10 @@ class RegisteredUserController extends Controller
 
 
         event(new Registered($user));
+        $user = User::where('email',$request->email)->first();
 
-        //Auth::login($user);
+        Auth::login($user);
 
-        return redirect(Route('login'));
+        return redirect(RouteServiceProvider::HOME);
     }
 }
