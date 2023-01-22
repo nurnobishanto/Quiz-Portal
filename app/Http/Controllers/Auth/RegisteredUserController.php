@@ -48,11 +48,11 @@ class RegisteredUserController extends Controller
         $user->assignRole('student');
 
 
-        event(new Registered($user));
-        $user = User::where('email',$request->email)->first();
+        //event(new Registered($user));
+        //$user = User::where('email',$request->email)->first();
 
-        //Auth::login($user);
+        Auth::login($user);
 
-        return redirect(RouteServiceProvider::LOGIN);
+        return redirect(RouteServiceProvider::HOME);
     }
 }
