@@ -21,6 +21,7 @@
                                         </div>
                                         <p class="p-2">
                                             <p class="p-1">
+                                                <h4>Quiz Name: {{$quiz->name}}</h4>
                                                 <strong class="btn btn-info text-dark">Subject : {{$quiz->subject->name}}</strong>
                                             </p>
                                             <p class="p-1">
