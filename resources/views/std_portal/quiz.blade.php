@@ -20,7 +20,7 @@
                                         <div class="text-3xl font-medium leading-8 ">
                                         </div>
                                         <p class="p-2">
-                                            <h4>Quiz Name: {{$quiz->name}}</h4>
+                                            <h4 class="btn btn-primary text-light" >Quiz Name: {{$quiz->name}}</h4>
                                             <p class="p-1">
                                                 <strong class="btn btn-info text-dark">Subject : {{$quiz->subject->name}}</strong>
                                             </p>
